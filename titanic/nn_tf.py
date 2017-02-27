@@ -70,9 +70,9 @@ def extract_label_and_feature(data):
 def main(_):
     # Import data
     data = read_csv_data("./train.csv")
-    # random.shuffle(data)
-    train_labels, train_features = extract_label_and_feature(data)
-    test_labels, test_features = extract_label_and_feature(data)
+    random.shuffle(data)
+    train_labels, train_features = extract_label_and_feature(data[:700])
+    test_labels, test_features = extract_label_and_feature(data[700:])
 
     train_labels_batch = list()
     train_features_batch = list()
