@@ -4,7 +4,7 @@ import tensorflow as tf
 import matplotlib.pyplot as plt
 import os
 
-TRAIN_FLAG = True
+TRAIN_FLAG = False
 
 env = gym.make('FrozenLake-v0')
 
