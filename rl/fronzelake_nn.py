@@ -38,7 +38,7 @@ if TRAIN_FLAG:
     # create lists to contain total rewards and steps per episode
     jList = []
     rList = []
-    
+
     for i in range(num_episodes):
         # Reset environment and get first new observation
         s = env.reset()
