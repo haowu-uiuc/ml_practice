@@ -172,9 +172,7 @@ with tf.Session() as sess:
                 # for each batch of episodes.
                 running_reward = reward_sum if running_reward is None\
                     else running_reward * 0.99 + reward_sum * 0.01
-                print 'Average reward for episode %f.' +\
-                    '  Total average reward %f.' % (
-                        reward_sum / batch_size, running_reward / batch_size)
+                print 'Average reward for episode %f.  Total average reward %f.' % (reward_sum / batch_size, running_reward / batch_size)
 
                 if reward_sum / batch_size > 200:
                     print "Task solved in", episode_number, 'episodes!'
